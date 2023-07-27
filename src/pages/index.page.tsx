@@ -5,7 +5,7 @@ import Standings, { StandingPosition } from '@/components/standings-table/standi
 export async function getStaticProps() {
 	let data;
 	const response = await fetch(`${process.env.API_URL}competitions/PL/standings?season=2022`, {
-		headers: { 'X-Auth-Token': process.env.API_TOKEN },
+		headers: { 'X-Auth-Token': process.env.API_TOKEN! },
 	});
 	data = await response.json();
 
@@ -17,10 +17,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ data }: Standings) => {
-	console.log('----------------');
-	console.log(data);
-	console.log('----------------');
-
 	const [currentStandings, setCurrentStandings] = useState<StandingPosition[] | null>(null);
 	const [seasonYear, setSeasonYear] = useState<string | null>(null);
 	const [viewExpandedTable, setViewExpandedTable] = useState<boolean>(false);
