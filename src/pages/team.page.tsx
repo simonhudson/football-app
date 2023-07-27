@@ -15,7 +15,7 @@ export async function getServerSideProps(ctx: NextPageContext) {
 	};
 }
 
-const TeamView = ({ data }: TeamExtended) => {
+const TeamView = ({ data }: TeamExtended | any) => {
 	console.log('team----------------');
 	console.log(data);
 	console.log('/team----------------');

@@ -1,13 +1,13 @@
 import { Competition } from './competition';
 import { Player } from './player';
 import { Staff } from './staff';
-export interface TeamBasic {
+export type TeamBasic = {
 	crest: string;
 	id: number;
 	name: string;
 	shortName: string;
 	tla: string;
-}
+};
 
 export interface TeamExtended extends TeamBasic {
 	address: string;

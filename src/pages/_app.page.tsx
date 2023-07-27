@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
+import MainNavigation from '@/components/main-navigation';
 import '@/styles/global.css';
 import styled, { StyleSheetManager } from 'styled-components';
 import isPropValid from '@emotion/is-prop-valid';
@@ -19,6 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 				<title>Football App</title>
 			</Head>
 			<AppWrapper>
+				<MainNavigation />
 				<main>
 					<Component {...pageProps} />
 				</main>
