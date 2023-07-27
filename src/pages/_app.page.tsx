@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 		<StyleSheetManager shouldForwardProp={isPropValid}>
 			<Head>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<title>Wedding App</title>
+				<title>Football App</title>
 			</Head>
 			<AppWrapper>
 				<MainNavigation />
