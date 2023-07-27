@@ -17,10 +17,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ data }: Standings) => {
-	console.log('----------------');
-	console.log(data);
-	console.log('----------------');
-
 	const [currentStandings, setCurrentStandings] = useState<StandingPosition[] | null>(null);
 	const [seasonYear, setSeasonYear] = useState<string | null>(null);
 
