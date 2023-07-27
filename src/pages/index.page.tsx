@@ -17,9 +17,12 @@ export async function getStaticProps() {
 }
 
 const Home = ({ data }: Standings) => {
+	console.log('----------------');
+	console.log(data);
+	console.log('----------------');
+
 	const [currentStandings, setCurrentStandings] = useState<StandingPosition[] | null>(null);
 	const [seasonYear, setSeasonYear] = useState<string | null>(null);
-	const [viewExpandedTable, setViewExpandedTable] = useState<boolean>(false);
 
 	useEffect(() => {
 		setCurrentStandings(data.standings[0].table);
@@ -31,7 +34,7 @@ const Home = ({ data }: Standings) => {
 			<h1>
 				{data.competition.name}: {seasonYear}
 			</h1>
-			{currentStandings && <StandingsTable data={currentStandings} viewExpanded={viewExpandedTable} />}
+			{currentStandings && <StandingsTable data={currentStandings} />}
 		</>
 	);
 };

@@ -1,4 +1,4 @@
-import Team from '../../types/team';
+import { TeamBasic } from '@/types/team';
 
 export type StandingPosition = {
 	draw: number;
@@ -10,7 +10,7 @@ export type StandingPosition = {
 	playedGames: number;
 	points: number;
 	position: number;
-	team: Team;
+	team: TeamBasic;
 	won: number;
 };
 
