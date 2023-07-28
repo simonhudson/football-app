@@ -16,7 +16,7 @@ export const Nav = styled.nav<NavProps>`
 	height: 100vh;
 	padding: 0;
 	position: absolute;
-	right: ${(props) => (props.isOpen ? '0' : '-80%')};
+	right: ${(props) => (props.isOpen ? '0' : '-100%')};
 	top: 0;
 	transition: all 0.5s 0.25s;
 	width: 75vw;
