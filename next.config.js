@@ -12,6 +12,14 @@ const setEnvVars = () => {
 const nextConfig = {
 	env: setEnvVars(),
 	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'crests.football-data.org',
+			},
+		],
+	},
 };
 
 module.exports = nextConfig;

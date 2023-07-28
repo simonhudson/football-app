@@ -1,6 +1,8 @@
 import { Competition } from './competition';
 import { Player } from './player';
 import { Staff } from './staff';
+import { Contract } from './contract';
+
 export type TeamBasic = {
 	crest: string;
 	id: number;
@@ -18,18 +20,7 @@ export interface TeamExtended extends TeamBasic {
 		name: string;
 	};
 	clubColors: string;
-	coach: {
-		contract: {
-			start: string;
-			until: string;
-		};
-		dateOfBirth: string;
-		firstName: string;
-		id: number;
-		lastName: string;
-		name: string;
-		nationality: string;
-	};
+	coach: Staff;
 	founded: number;
 	lastUpdated: string;
 	runningCompetitions: Competition[];
